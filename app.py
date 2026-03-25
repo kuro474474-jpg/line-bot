@@ -27,6 +27,17 @@ def callback():
     handler.handle(body, signature)
     return "OK"
 
+@app.route("/")
+def home():
+    return "OK"
+
+@app.route("/callback", methods=["POST"])
+def callback():
+    signature = request.headers["X-Line-Signature"]
+    body = request.get_data(as_text=True)
+
+    handler.handle(body, signature)
+    return "OK"
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
@@ -40,6 +51,8 @@ def handle_message(event):
         reply = "好可憐 腦子長水泡"
     elif "尻噴麻" in text:
         reply = "好可憐 腦子長水泡"
+    elif "雞雞" in text:
+        reply = "關鍵字包含免疫狗沒有的東西"
     else:
         return
 
