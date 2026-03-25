@@ -19,18 +19,11 @@ configuration = Configuration(access_token=CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SECRET)
 
 
-@app.route("/callback", methods=["POST"])
-def callback():
-    signature = request.headers["X-Line-Signature"]
-    body = request.get_data(as_text=True)
-
-    handler.handle(body, signature)
-    return "OK"
-
 @app.route("/")
 def home():
     return "OK"
 
+
 @app.route("/callback", methods=["POST"])
 def callback():
     signature = request.headers["X-Line-Signature"]
@@ -38,6 +31,7 @@ def callback():
 
     handler.handle(body, signature)
     return "OK"
+
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
