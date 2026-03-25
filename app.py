@@ -47,6 +47,10 @@ def handle_message(event):
         reply = "好可憐 腦子長水泡"
     elif "雞雞" in text:
         reply = "關鍵字包含免疫狗沒有的東西"
+    elif "噴出" in text:
+        reply = "輪機系帶你見見世面OK?"
+    elif "噴很多" in text:
+        reply = "輪機系帶你見見世面OK?"
     else:
         return
 
