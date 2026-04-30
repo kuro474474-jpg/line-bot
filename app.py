@@ -58,6 +58,14 @@ def handle_message(event):
         reply = "好可憐 腦子長水泡"
     elif "尻噴麻" in text:
         reply = "好可憐 腦子長水泡"
+    elif "女房" in text:
+        reply = "好可憐 整天意淫人家"
+    elif "女室" in text:
+        reply = "好可憐 整天意淫人家"
+    elif "把握" in text:
+        reply = "說說仔 準備300萬比較快"
+    elif "沒機會" in text:
+        reply = "說說仔 準備300萬比較快"
     else:
         return
 
