@@ -42,6 +42,8 @@ def handle_message(event):
         reply = "關鍵字包含免疫狗沒有的東西"
     elif "很色" in text:
         reply = "ㄏㄏ"
+    elif "好色" in text:
+        reply = "ㄏㄏ"
     elif "很大" in text:
         reply = "沒你大"
     elif "噴出" in text:
@@ -49,7 +51,7 @@ def handle_message(event):
     elif "噴很多" in text:
         reply = "輪機系帶你見見世面OK?"
     elif "尻尻" in text:
-        reply = "好可憐 腦子長水泡"
+        reply = "-"*2000
     elif "噴噴" in text:
         reply = "好可憐 腦子長水泡"
     elif "麻麻" in text:
